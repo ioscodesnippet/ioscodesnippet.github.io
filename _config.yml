@@ -1,0 +1,10 @@
+name: ""
+description: ""
+
+url: "beta.ioscodesnippet.com"
+
+paginate: 10
+
+markdown: rdiscount
+permalink: pretty
+pygments: true
