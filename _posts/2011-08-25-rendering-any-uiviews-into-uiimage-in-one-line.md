@@ -13,6 +13,9 @@ tags:
 - render
 - iOS
 ---
+
+# {{ page.title }}
+
 Looks like you'd like to make some snapshots of your application, or maybe
 capturing partial UI elements on the screen for caching or saving? You can
 achieve this in just one single line like this.
