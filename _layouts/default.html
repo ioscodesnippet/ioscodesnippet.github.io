@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>ioscodesnippet.github.io by ioscodesnippet</title>
+    <title>{{ page.title }}</title>
 
     <link rel="stylesheet" href="/stylesheets/styles.css">
     <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
@@ -11,6 +11,12 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <style>
+      .active {
+        background-color: rgba(51, 153, 204, 0.1);
+      }
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -18,8 +24,13 @@
         <a href="/"><h1>beta.ioscodesnippet.com</h1></a>
 
         {% for post in site.posts %}
+          {% if page.title == post.title %}
+            {% capture class %}view active{% endcapture %}
+          {% else %}
+            {% capture class %}view{% endcapture %}
+          {% endif %}
           {% if post.publish %}
-          <p class="view"><a href="{{ post.url }}">{{ post.title }}</a></p>
+          <p class="{{ class }}"><a href="{{ post.url }}">{{ post.title }}</a></p>
           {% endif %}
         {% endfor %}
 
