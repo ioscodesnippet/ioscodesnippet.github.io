@@ -13,15 +13,22 @@
     <![endif]-->
 
     <style>
-      .active {
-        background-color: rgba(51, 153, 204, 0.1);
+      .active a {
+         -background-color: rgba(51, 153, 204, 0.1);
+         font-weight: bold;
+      }
+      .active a small {
+         font-weight: normal;
+      }
+      .view a small {
+        margin-top: 0em;
       }
     </style>
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <a href="/"><h1>beta.ioscodesnippet.com</h1></a>
+        <a href="/"><h1>ioscodesnippet.com</h1></a>
 
         {% for post in site.posts %}
           {% if page.title == post.title %}
@@ -30,7 +37,7 @@
             {% capture class %}view{% endcapture %}
           {% endif %}
           {% if post.publish %}
-          <p class="{{ class }}"><a href="{{ post.url }}">{{ post.title }}</a></p>
+          <p class="{{ class }}"><a href="{{ post.url }}">{{ post.name }}<small>{{ post.title }}</small></a></p>
           {% endif %}
         {% endfor %}
 
