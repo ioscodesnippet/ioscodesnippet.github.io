@@ -18,7 +18,9 @@
         <a href="/"><h1>beta.ioscodesnippet.com</h1></a>
 
         {% for post in site.posts %}
+          {% if post.publish %}
           <p class="view"><a href="{{ post.url }}">{{ post.title }}</a></p>
+          {% endif %}
         {% endfor %}
 
       </header>

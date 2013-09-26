@@ -1,6 +1,7 @@
 --- 
 layout: default
 title: Rendering any UIViews into UIImage in one line
+publish: true
 category: ioscodesnippet
 comments: true
 share: true
