@@ -1,9 +1,0 @@
-[submodule "_includes/UINibDecoderProxy"]
-	path = _includes/UINibDecoderProxy
-	url = https://gist.github.com/4466616.git
-[submodule "_includes/JTDropShadowFixNavigationViewController"]
-	path = _includes/JTDropShadowFixNavigationViewController
-	url = https://gist.github.com/6591926.git
-[submodule "_includes/UIImage-JTColor"]
-	path = _includes/UIImage-JTColor
-	url = https://gist.github.com/1571875.git
