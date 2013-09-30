@@ -1,9 +1,9 @@
 --- 
 layout: default
 title: Creating a placeholder UIImage dynamically with color
-name: UIImage+JTColor
+name: UIImage-JTColor
 author: jamztang
 publish: true
 ---
 
-{% include UIImage-JTColor/README.md %}
+{% include Pods/UIImage-JTColor/README.md %}

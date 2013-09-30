@@ -1,0 +1,5 @@
+platform :ios, '5.0'
+pod 'JTDropShadowFixNavigationViewController'
+pod 'UINibDecoderProxy'
+pod 'UIImage-JTColor'
+xcodeproj 'ioscodesnippet/ioscodesnippet.xcodeproj'

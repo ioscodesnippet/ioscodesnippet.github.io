@@ -6,4 +6,4 @@ author: jamztang
 publish: true
 ---
 
-{% include JTDropShadowFixNavigationViewController/README.md %}
+{% include Pods/JTDropShadowFixNavigationViewController/README.md %}
