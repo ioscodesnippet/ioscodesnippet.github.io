@@ -10,7 +10,7 @@ publish: true
 
 Sometimes you're wondering what are stored in an NSCoder instance?
 
-There's a little utility exactly for this purpose, I called it `UINibDecoderProxy`. Here's how you use it:
+Here's a little utility exactly for this purpose, I called it `UINibDecoderProxy`. This is how you use it:
 
 ```
 #import "UINibDecoderProxy.h"
@@ -28,4 +28,4 @@ Now go to `UINibDecoderProxy.m` and set a break point at `-[UINibDecoderProxy fo
 {% include Pods/UINibDecoderProxy/UINibDecoderProxy.m %}
 ```
 
-Not too tricky.
+Hopefully not too tricky.
