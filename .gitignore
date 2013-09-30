@@ -1,5 +1,10 @@
 .DS_Store
 _site/
 Podfile.lock
-Pods/
 *.xcworkspace
+Pods-*
+BuildHeaders
+Headers
+Manifest.lock
+Pods.xcconfig
+project.pbxproj
