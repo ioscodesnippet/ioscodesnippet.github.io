@@ -22,11 +22,11 @@ Looks like you'd like to make some snapshots of your application, or maybe
 capturing partial UI elements on the screen for caching or saving? You can
 achieve this in just one single line like this.
 
-    
-    UIImage *viewSnapshot = [myView toImage];
-    
 
-  
+```objective-c    
+UIImage *viewSnapshot = [myView toImage];
+```    
+
 
 Add this UIView+JTViewToImage category to your project, and you'll also needed
 to link &lt;QuartzCore/QuartzCore.h&gt; framework too.
@@ -37,9 +37,10 @@ to link &lt;QuartzCore/QuartzCore.h&gt; framework too.
 In advance, if you want to make sure you've the exact size of the static image
 output, try this line instead.
 
-    
-    UIImage *viewSnapshot = [myView toImageWithScale:1];
-    
+
+```objective-c    
+UIImage *viewSnapshot = [myView toImageWithScale:1];
+```
 
   
 This will tell your app to ignore the screen scale and simply reference to the

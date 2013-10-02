@@ -5,6 +5,6 @@ url: "beta.ioscodesnippet.com"
 
 paginate: 10
 
-markdown: rdiscount
+markdown: redcarpet
 permalink: pretty
 pygments: true
