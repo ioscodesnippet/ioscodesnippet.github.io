@@ -24,6 +24,20 @@
         margin-top: 0em;
       }
     </style>
+
+    <!-- Tweet button -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    {% capture tweetbutton %}<a href="https://twitter.com/share" class="twitter-share-button" data-via="ioscodesnippet"
+      {% if page.counturl %}
+      {% assign counturl = page.counturl %}
+      {% else %}
+      {% capture counturl %}{{ site.url }}/{{ page.alias }}{% endcapture %}
+      {% endif %}
+      {% if counturl %}
+      counturl="{{ counturl }}"
+      {% endif %} 
+      >Tweet</a> {% endcapture %}
+
   </head>
   <body>
     <div class="wrapper">
@@ -44,6 +58,8 @@
       </header>
       <section>
         {{ content }}
+
+        {{ tweetbutton }}
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
