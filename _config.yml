@@ -62,15 +62,15 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : ioscodesnippet
     livefyre :
       site_id : 123
     intensedebate :
       account : 123abc
     facebook :
-      appid : 123
+      appid : 375601695908894
       num_posts: 5
-      width: 580
+      width: 500
       colorscheme: light
    
   # Settings for analytics helper
