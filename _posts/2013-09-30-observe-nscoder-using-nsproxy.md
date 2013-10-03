@@ -4,6 +4,7 @@ title: UINibDecoderProxy - Observes what's encoded in NSCoder object
 name: UINibDecoderProxy
 author: jamztang
 publish: true
+comments: true
 ---
 
 # {{ page.title }}

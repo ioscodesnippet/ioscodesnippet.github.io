@@ -4,6 +4,7 @@ title: Using custom drop shadows in UINavigationBar (fix for iOS 6.1)
 name: JTDropShadowFixNavigationViewController
 author: jamztang
 publish: true
+comments: true
 alias: post/61487770156/custom-shadow-image-on-navigation-bar-ios6-fix
 ---
 
