@@ -27,20 +27,17 @@
       #disqus_thread {
         margin-top: 1em;
       }
-    </style>
 
-    <!-- Tweet button -->
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    {% capture tweetbutton %}<a href="https://twitter.com/share" class="twitter-share-button" data-via="ioscodesnippet"
-      {% if page.counturl %}
-      {% assign counturl = page.counturl %}
-      {% else %}
-      {% capture counturl %}{{ site.url }}/{{ page.alias }}{% endcapture %}
-      {% endif %}
-      {% if counturl %}
-      counturl="{{ counturl }}"
-      {% endif %} 
-      >Tweet</a> {% endcapture %}
+      .post-sharing ul {
+        list-style-type:none;
+        margin:0;
+        padding:0;
+      }
+      .post-sharing li {
+        display:inline-block;
+        width: 100px;
+      }
+    </style>
 
   </head>
   <body>
@@ -63,7 +60,14 @@
       <section>
         {{ content }}
 
-        {{ tweetbutton }}
+        <div class="post-sharing">
+          <ul>
+            <li>{% include JB/sharing-providers/facebook %}
+            <li>{% include JB/sharing-providers/twitter %}
+            <li>{% include JB/sharing-providers/googleplus %}
+            <li>{% include JB/sharing-providers/linkedin %}
+          </ul>
+        </div>
 
         {% if page.comments %}
         <div id="disqus_thread"></div>
