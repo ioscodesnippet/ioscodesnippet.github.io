@@ -5,6 +5,7 @@ name: UINibDecoderProxy
 author: jamztang
 publish: true
 comments: true
+description: false
 tags:
 - NSCoder
 - get all keys

@@ -6,6 +6,7 @@ author: jamztang
 category: ioscodesnippet
 comments: true
 share: true
+desccription: A snippet to take snapshots on any views into image
 tags: 
 - render
 - capture
