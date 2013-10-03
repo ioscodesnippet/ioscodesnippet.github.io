@@ -5,6 +5,12 @@ name: UINibDecoderProxy
 author: jamztang
 publish: true
 comments: true
+tags:
+- NSCoder
+- get all keys
+- decoding
+- contains
+- valueForKey
 ---
 
 # {{ page.title }}

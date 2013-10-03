@@ -9,6 +9,15 @@ markdown: redcarpet
 permalink: pretty
 pygments: true
 
+keywords:
+- ios
+- code
+- snippet
+- snippets
+- cocoapods
+- develop
+- resource
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :

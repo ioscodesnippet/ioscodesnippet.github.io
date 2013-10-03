@@ -6,6 +6,16 @@ author: jamztang
 publish: true
 comments: true
 alias: post/61487770156/custom-shadow-image-on-navigation-bar-ios6-fix
+tags:
+- create
+- adding
+- custom
+- drop shadow
+- setShadowImage
+- iOS
+- navigation bar
+- UINavigationBar
+- clipsToBounds
 ---
 
 {% include Pods/JTDropShadowFixNavigationViewController/README.md %}

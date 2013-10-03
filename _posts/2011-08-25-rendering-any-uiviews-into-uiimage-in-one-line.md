@@ -7,13 +7,18 @@ category: ioscodesnippet
 comments: true
 share: true
 tags: 
-- ioscodesnippet
-- UIView
-- category
-- objective-c
-- UIImage
 - render
+- capture
+- UIView
+- to image
+- UIImage
 - iOS
+- snapshot
+- screenshot
+- picture
+- taking
+- create
+- take
 ---
 
 # {{ page.title }}
