@@ -1,11 +1,10 @@
 --- 
 layout: default
-title: UINibDecoderProxy - Observes what's encoded in NSCoder object
+title: Observes what's encoded in an NSCoder object
 name: UINibDecoderProxy
 author: jamztang
 publish: true
 comments: true
-description: false
 tags:
 - NSCoder
 - get all keys

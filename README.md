@@ -1,7 +1,7 @@
 iOS Code Snippets
 =================
 
-The code snippets here can be installed easily with [Cocoapods] custom repo.
+This is a collection of self contained inspiring little pieces on iOS development. The code snippets here can be installed easily through our public [ioscodesnippet / Spec][1] Cocoapods custom repo.
 
 To configure the **ioscodesnippet** official repo, run this once.
 
@@ -11,7 +11,10 @@ Specify any of the pods listed in your Podfile then run
 
     $ pod install
 
-Now you can run the project with SpecUsage.xcworkspace
+You'll be instructed to open the project with `yourproject.xcworkspace`.
+
+Don't know what's [Cocoapods]?
 
 [Cocoapods]:https://github.com/CocoaPods/CocoaPods
+[1]:https://github.com/ioscodesnippet/Specs
 

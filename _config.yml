@@ -1,7 +1,7 @@
-name: ""
-description: ""
+name: "ioscodesnippet.com"
+title: "ioscodesnippet.com"
 
-url: "http://ioscodesnippet.com"
+url: "http://beta.ioscodesnippet.com"
 
 paginate: 10
 
@@ -9,14 +9,12 @@ markdown: redcarpet
 permalink: pretty
 pygments: true
 
-keywords:
-- ios
-- code
-- snippet
-- snippets
-- cocoapods
-- develop
-- resource
+author :
+  name : Jamz Tang
+  email : ioscodesnippet@jamztang.com
+  github : jamztang
+  twitter : jamztang
+  facebookid: jamztang
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #

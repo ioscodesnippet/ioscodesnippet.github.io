@@ -1,22 +1,32 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    {% if page.tags %}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="keywords" content="{{ page.tags | join: ',' }}" />
-    {% else %}
-    <meta name="keywords" content="{{ site.keywords | join: ',' }}" />
-    {% endif %}
 
     {% if page.description == false %}
-    {% elsif page.description != nil %}
-    <meta name="description" content="{{ page.description | strip_html | truncate:200 }}" />
     {% else %}
-    <meta name="description" content="{{ content | strip_html | strip_newlines | truncate:200 }}" />
+      {% if page.description != nil %}
+        {% capture description %}{{ page.description | strip_html | strip_newlines | truncate:200 }}{% endcapture %}
+      {% else %}
+        {% capture description %}{{ content | strip_html | strip_newlines | truncate:200 }}{% endcapture %}
+      {% endif %}
+    <meta name="description" content="{{ description }}" />
+    <meta property="og:description" content="{{ description }}"/>
     {% endif %}
 
-    <title>{{ page.title }}</title>
+    {% capture title %}{{ page.title }} | {{ site.name }}{% endcapture %}
+
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:image" content="{{ site.url }}/images/logo.png"/>
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+    <meta property="og:type" content="{% if page.type %}{{ page.type }}{% else %}article{% endif %}"/>
+    <meta property="fb:app_id" content="{{ site.JB.sharing.facebook.appid }}"/>
+    <meta property="fb:admins" content="{{ site.author.facebookid }}"/>
+
+    <title>{{ title }}</title>
 
     <link rel="stylesheet" href="/stylesheets/styles.css">
     <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
@@ -24,6 +34,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
 
     <style>
       .active a {
@@ -51,6 +62,7 @@
         width: 100px;
       }
     </style>
+
 
   </head>
   <body>
