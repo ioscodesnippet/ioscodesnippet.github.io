@@ -2,7 +2,9 @@
 layout: default
 title: Rendering any UIViews into UIImage in one line
 name: UIView+JTViewToImage
-author: jamztang
+author: 
+  github: jamztang
+  twitter: jamztang
 category: ioscodesnippet
 comments: true
 share: true

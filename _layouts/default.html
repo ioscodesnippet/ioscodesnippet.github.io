@@ -14,17 +14,26 @@
       {% endif %}
     <meta name="description" content="{{ description }}" />
     <meta property="og:description" content="{{ description }}"/>
+    <meta name="twitter:description" content="{{ description }}">
     {% endif %}
 
     {% capture title %}{{ page.title }} | {{ site.name }}{% endcapture %}
+    {% capture logo %}{{ site.url }}/images/logo.png{% endcapture %}
 
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:site_name" content="{{ site.name }}" />
-    <meta property="og:image" content="{{ site.url }}/images/logo.png"/>
+    <meta property="og:image" content="{{ logo }}"/>
     <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
     <meta property="og:type" content="{% if page.type %}{{ page.type }}{% else %}article{% endif %}"/>
     <meta property="fb:app_id" content="{{ site.JB.sharing.facebook.appid }}"/>
     <meta property="fb:admins" content="{{ site.author.facebookid }}"/>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{ site.twitter }}">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:creator" content="{{ page.author.twitter }}">
+    <meta name="twitter:image:src" content="{{ logo }}">
+    <meta name="twitter:domain" content="{{ site.domain }}">
 
     <title>{{ title }}</title>
 

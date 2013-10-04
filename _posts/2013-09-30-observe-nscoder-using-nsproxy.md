@@ -2,9 +2,12 @@
 layout: default
 title: Observes what's encoded in an NSCoder object
 name: UINibDecoderProxy
-author: jamztang
+author: 
+  github: jamztang
+  twitter: jamztang
 publish: true
 comments: true
+description: Sometimes you're wondering what are stored in an NSCoder instance? Here's a little utility exactly for this purpose, I called it `UINibDecoderProxy`.
 tags:
 - NSCoder
 - get all keys
