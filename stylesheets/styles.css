@@ -222,7 +222,8 @@ footer {
   }
 
   #posts {
-    height: 320px;
+    overflow:auto;
+    height:inherit;
   }
 }
 
@@ -244,7 +245,8 @@ footer {
   }
 
   #posts {
-    height: 320px;
+    overflow:auto;
+    height:inherit;
   }
 }
 
@@ -258,8 +260,21 @@ footer {
   }
 
   #posts {
-    height: 120px;
+    overflow:auto;  
+    height:inherit;
+    display: -webkit-flex; 
+    height: 240px; overflow-x: scroll;
+    -webkit-flex-direction: column;
   }
+
+  #posts .view {
+    width: 100px; height: 200px;
+    display: block;
+  }
+
+  #overflow{height:220px;overflow-x:scroll;overflow-y:hidden;}
+  #overflow .container{}
+  #overflow .container a {border:1px solid #CCC;float:left;width:100px;height:160px;float:left; margin-right: 10px}
 }
 
 @media print {
@@ -267,5 +282,9 @@ footer {
     padding:0.4in;
     font-size:12pt;
     color:#444;
+  }
+
+  #posts {
+    display: hidden;
   }
 }
