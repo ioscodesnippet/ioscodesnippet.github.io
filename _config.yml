@@ -3,7 +3,10 @@ title: "ioscodesnippet.com"
 
 url: "http://beta.ioscodesnippet.com"
 domain: "ioscodesnippet.com"
-twitter : ioscodesnippet
+
+follow :
+  twitter : ioscodesnippet
+  facebookid : ioscodesnippet
 
 paginate: 10
 

@@ -6,6 +6,8 @@ description: "Self contained inspiring little pieces on iOS development. Now ava
 author: 
   github: jamztang
   twitter: jamztang
+follow: true
+sharing: false
 type: website
 tags:
 - ioscodesnippet
@@ -20,3 +22,4 @@ tags:
 ---
 
 {% include README.md %}
+

@@ -13,7 +13,7 @@ Specify any of the pods listed in your Podfile then run
 
 You'll be instructed to open the project with `yourproject.xcworkspace`.
 
-Don't know what's [Cocoapods]?
+Learn more about what you can do with [Cocoapods].
 
 [Cocoapods]:https://github.com/CocoaPods/CocoaPods
 [1]:https://github.com/ioscodesnippet/Specs

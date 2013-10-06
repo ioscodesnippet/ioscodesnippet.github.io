@@ -65,11 +65,18 @@
         list-style-type:none;
         margin:0;
         padding:0;
+        background: none;
+        border: none;
       }
       .post-sharing li {
         display:inline-block;
         width: 100px;
+        border: 0px;
       }
+      p .post-sharing {
+        display: inline-block;
+      }
+
     </style>
 
 
@@ -94,6 +101,7 @@
       <section>
         {{ content }}
 
+        {% if page.sharing != false %}
         <div class="post-sharing">
           <ul>
             <li>{% include JB/sharing-providers/facebook %}
@@ -102,6 +110,17 @@
             <li>{% include JB/sharing-providers/linkedin %}
           </ul>
         </div>
+        {% endif %}
+
+        {% if page.follow %}
+        <p>If you like this page, you can <strong>follow us</strong> to keep track of our updates!</p> 
+        <div class="post-sharing">
+          <ul>
+            <li>{% include JB/follow-providers/facebook %}
+            <li>{% include JB/follow-providers/twitter %}
+          </ul>
+        </div>
+        {% endif %}
 
         {% if page.comments %}
         {% endif %}
