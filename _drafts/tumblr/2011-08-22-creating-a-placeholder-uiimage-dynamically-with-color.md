@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Creating a placeholder UIImage dynamically with color
+publish: false
 tags:
 - UIImage
 - category

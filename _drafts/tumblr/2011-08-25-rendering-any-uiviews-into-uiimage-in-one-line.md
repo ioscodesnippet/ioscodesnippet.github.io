@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Rendering any UIViews into UIImage in one line
+publish: false
 tags:
 - ioscodesnippet
 - UIView

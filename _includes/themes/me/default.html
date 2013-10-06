@@ -54,7 +54,12 @@
 //        parentDiv.scrollTop = parentDiv.scrollTop + innerListItem.position().top;
 
         // Scroll to the center
-        parentDiv[0].scrollTop = innerListItem.position().top - parentDiv.height()/2 + innerListItem.height()/2;
+        // parentDiv[0].scrollTop = parentDiv[0].scrollTop + innerListItem.position().top - parentDiv.height()/2 + innerListItem.height()/2;
+        parentDiv.scrollTop(parentDiv.scrollTop() +
+                            (innerListItem.position().top -
+                             parentDiv.position().top) -
+                             (parentDiv.height()/2) +
+                             (innerListItem.height()/2) )
       };
 
       $("#posts").ready(function() {
@@ -129,6 +134,7 @@
             {% capture id %}id="active"{% endcapture %}
           {% else %}
             {% capture class %}view{% endcapture %}
+            {% capture id %}{% endcapture %}
           {% endif %}
           {% if post.publish != false %}
           <p class="{{ class }}" {{ id }}><a href="{{ post.url }}">{{ post.name }}<small>{{ post.title }}</small></a></p>
