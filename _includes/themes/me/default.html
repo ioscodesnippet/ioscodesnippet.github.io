@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="keywords" content="{{ page.tags | join: ',' }}" />
+
+    {% if page.description == false %}
+    {% else %}
+      {% if page.description != nil %}
+        {% capture description %}{{ page.description | strip_html | strip_newlines | truncate:200 }}{% endcapture %}
+      {% else %}
+        {% capture description %}{{ content | strip_html | strip_newlines | truncate:200 }}{% endcapture %}
+      {% endif %}
+    <meta name="description" content="{{ description }}" />
+    <meta property="og:description" content="{{ description }}"/>
+    <meta name="twitter:description" content="{{ description }}">
+    {% endif %}
+
+    {% capture title %}{{ page.title }} | {{ site.name }}{% endcapture %}
+    {% capture logo %}{{ site.url }}/images/logo.png{% endcapture %}
+
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:image" content="{{ logo }}"/>
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+    <meta property="og:type" content="{% if page.type %}{{ page.type }}{% else %}article{% endif %}"/>
+    <meta property="fb:app_id" content="{{ site.JB.sharing.facebook.appid }}"/>
+    <meta property="fb:admins" content="{{ site.author.facebookid }}"/>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{ site.twitter }}">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:creator" content="{{ page.author.twitter }}">
+    <meta name="twitter:image:src" content="{{ logo }}">
+    <meta name="twitter:domain" content="{{ site.domain }}">
+
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+
+    <script>
+      
+
+      var scroll2 = function() {
+        var parentDiv = $("#posts");
+        var innerListItem = $("#active");
+
+        // Scroll to the top
+//        parentDiv.scrollTop = parentDiv.scrollTop + innerListItem.position().top;
+
+        // Scroll to the center
+        parentDiv[0].scrollTop = innerListItem.position().top - parentDiv.height()/2 + innerListItem.height()/2;
+      };
+
+      $("#posts").ready(function() {
+        scroll2();
+      });
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <style>
+      .active a {
+         -background-color: rgba(51, 153, 204, 0.1);
+         font-weight: bold;
+      }
+      .active a small {
+         font-weight: normal;
+      }
+      .view a small {
+        margin-top: 0em;
+      }
+
+      #disqus_thread {
+        margin-top: 1.5em;
+      }
+
+      .post-sharing ul {
+        list-style-type:none;
+        margin:0;
+        padding:0;
+        background: none;
+        border: none;
+      }
+      .post-sharing li {
+        display:inline-block;
+        width: 100px;
+        border: 0px;
+      }
+
+      p .post-sharing {
+        display: inline-block;
+      }
+
+      .pagination ul {
+        display:inline-block;
+        background:none;
+        border: none;
+      }
+      .pagination li {
+        display:inline-block;
+        background:none;
+      }
+      
+      #posts {
+        overflow: scroll;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="/"><h1>ioscodesnippet.com</h1></a>
+
+        <div id="posts">
+        {% for post in site.posts %}
+          {% if page.title == post.title %}
+            {% capture class %}view active{% endcapture %}
+            {% capture id %}id="active"{% endcapture %}
+          {% else %}
+            {% capture class %}view{% endcapture %}
+          {% endif %}
+          {% if post.publish != false %}
+          <p class="{{ class }}" {{ id }}><a href="{{ post.url }}">{{ post.name }}<small>{{ post.title }}</small></a></p>
+          {% endif %}
+        {% endfor %}
+        </div>
+
+        {% comment %}
+        <div id="post-pagination" class="pagination">
+          {% if paginator.previous_page %}
+            <span class="previous">
+              {% if paginator.previous_page == 1 %}
+                <a href="/">Prev</a>
+              {% else %}
+                <a href="{{ paginator.previous_page_path }}">Prev</a>
+              {% endif %}
+            </span>
+          {% else %}
+            <span class="previous disabled">Prev</span>
+          {% endif %}
+
+          <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+          {% comment %}
+          <ul class="pages">
+            <li class="page">
+              {% if paginator.page == 1 %}
+                <span class="current-page">1</span>
+              {% else %}
+                <a href="/">1</a>
+              {% endif %}
+            </li>
+
+            {% for count in (2..paginator.total_pages) %}
+              <li class="page">
+                {% if count == paginator.page %}
+                  <span class="current-page">{{ count }}</span>
+                {% else %}
+                  <a href="/page{{ count }}">{{ count }}</a>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+          {% endcomment %}
+
+          {% if paginator.next_page %}
+            <span class="next">
+              <a href="{{ paginator.next_page_path }}">Next</a>
+            </span>
+          {% else %}
+            <span class="next disabled">
+              Next
+            </span>
+          {% endif %}
+          {% endcomment %}
+
+        </div>
+      </header>
+      <section>
+        {{ content }}
+
+        {% if page.smart_layer != false %}
+        <!-- AddThis Smart Layers BEGIN -->
+        <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f2e0cf454580a2c"></script>
+        <script type="text/javascript">
+          addthis.layers({
+            'theme' : 'transparent', 
+            'follow' : {
+              'services' : [
+                {'service': 'facebook', 'id': '{{ site.follow.facebookid }}'},
+                {'service': 'twitter', 'id': '{{ site.follow.twitter }}'}
+              ]
+            },  
+            'whatsnext' : {},  
+            'recommended' : {} 
+          });
+        </script>
+        <!-- AddThis Smart Layers END -->
+        {% endif %}
+
+        {% if page.sharing != false %}
+        <!-- AddThis Button BEGIN -->
+        <p>If you think this is useful, share this article with your friends :)</p>
+
+        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f2e0cf454580a2c"></script>
+        <!-- AddThis Button END -->
+        {% endif %}
+
+        {% if site.organic %}
+        <div class="post-sharing">
+          <ul>
+            <li>{% include JB/sharing-providers/facebook %}
+            <li>{% include JB/sharing-providers/twitter %}
+            <li>{% include JB/sharing-providers/googleplus %}
+            <li>{% include JB/sharing-providers/linkedin %}
+          </ul>
+        </div>
+        {% endif %}
+
+        {% if page.follow %}
+        <p>If you like this page, you can <strong>follow us</strong> to keep track of our updates!</p> 
+        <div class="post-sharing">
+          <ul>
+            <li>{% include JB/follow-providers/facebook %}
+            <li>{% include JB/follow-providers/twitter %}
+          </ul>
+        </div>
+        {% endif %}
+
+        {% if page.comments %}
+        {% endif %}
+
+        {% include JB/comments %}
+    
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/javascripts/scale.fix.js"></script>
+
+    {% include JB/analytics %}
+    
+  </body>
+</html>
