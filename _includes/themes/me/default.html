@@ -125,7 +125,16 @@
   </head>
   <body>
     <div class="wrapper">
+      <div id="logo">
+        <a href="/"></a>
+      </div>
+      {% if page.date %}
+      <div id="info">
+        <p>Created by Jamz Tang at {{ page.date | date: "%-d %B %Y" }}</p>
+      </div>
+      {% endif %}
       <section>
+
         {{ content }}
 
         {% if page.smart_layer != false %}
@@ -194,7 +203,7 @@
     
       </section>
       <header>
-        <a href="/"><h1>ioscodesnippet.com</h1></a>
+        <h1>ioscodesnippet.com</h1>
 
         <div id="overflow">
         <div class="container">
