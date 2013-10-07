@@ -5,7 +5,6 @@ name: UINibDecoderProxy
 author: 
   github: jamztang
   twitter: jamztang
-publish: true
 comments: true
 description: Sometimes you're wondering what are stored in an NSCoder instance? Here's a little utility exactly for this purpose, I called it `UINibDecoderProxy`.
 tags:
@@ -15,8 +14,6 @@ tags:
 - contains
 - valueForKey
 ---
-
-# {{ page.title }}
 
 Sometimes you're wondering what are stored in an NSCoder instance?
 

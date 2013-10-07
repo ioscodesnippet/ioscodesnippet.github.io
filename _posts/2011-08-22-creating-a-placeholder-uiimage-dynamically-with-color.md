@@ -5,8 +5,8 @@ name: UIImage-JTColor
 author: 
   github: jamztang
   twitter: jamztang
-publish: true
 comments: true
+noheading: true
 alias: post/9247898208/creating-a-placeholder-uiimage-dynamically-with-color
 tags:
 - create

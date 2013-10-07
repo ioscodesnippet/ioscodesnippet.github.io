@@ -9,6 +9,7 @@ author:
 follow: true
 sharing: false
 type: website
+noheading: true
 tags:
 - ioscodesnippet
 - cocoapods

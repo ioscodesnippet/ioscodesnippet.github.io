@@ -5,7 +5,6 @@ name: UIView+JTViewToImage
 author: 
   github: jamztang
   twitter: jamztang
-category: ioscodesnippet
 comments: true
 share: true
 desccription: A snippet to take snapshots on any views into image
@@ -23,8 +22,6 @@ tags:
 - create
 - take
 ---
-
-# {{ page.title }}
 
 Looks like you'd like to make some snapshots of your application, or maybe
 capturing partial UI elements on the screen for caching or saving? You can
