@@ -7,6 +7,8 @@ domain: "ioscodesnippet.com"
 follow :
   twitter : ioscodesnippet
   facebookid : ioscodesnippet
+  tumblr : ioscodesnippet
+  rss : "http://ioscodesnippet.tumblr.com/rss"
 
 paginate: 10
 
