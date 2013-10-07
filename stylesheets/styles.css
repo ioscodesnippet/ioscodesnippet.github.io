@@ -183,8 +183,9 @@ footer {
   bottom:50px;
 }
 
-#posts {
-  height: 480px;
+#overflow{
+  overflow-y:scroll;
+  height:480px;
 }
 
 @media print, screen and (max-width: 960px) {
@@ -201,18 +202,18 @@ footer {
   }
   
   header {
-    padding-right:320px;
+    -padding-right:320px;
   }
   
   section {
-    border:1px solid #e5e5e5;
+    border-bottom:1px solid #e5e5e5;
     border-width:1px 0;
-    padding:20px 0;
+    padding-bottom:20px;
     margin:0 0 20px;
   }
   
   header a small {
-    display:inline;
+    -display:inline;
   }
   
   header ul {
@@ -221,9 +222,25 @@ footer {
     top:52px;
   }
 
-  #posts {
-    overflow:auto;
-    height:inherit;
+  #overflow{
+    overflow-x:scroll;
+    overflow-y:hidden;
+    -moz-column-width:105px; /* Firefox */
+    -webkit-column-width:105px; /* Safari and Chrome */
+    column-width:105px;
+    height: 180px;
+  }
+  #overflow .container{
+  }
+  #overflow .container a {
+    margin-top:0px;
+    border:1px solid #CCC;
+    width: 100px;
+    height:160px;
+    margin-right: 10px;
+    display:block;
+    padding: 3px 5px;
+    word-wrap:break-word;
   }
 }
 
@@ -244,37 +261,18 @@ footer {
     word-wrap:normal;
   }
 
-  #posts {
-    overflow:auto;
-    height:inherit;
-  }
 }
 
 @media print, screen and (max-width: 480px) {
   body {
     padding:15px;
+    padding-bottom:50px;
   }
   
   header ul {
     display:none;
   }
 
-  #posts {
-    overflow:auto;  
-    height:inherit;
-    display: -webkit-flex; 
-    height: 240px; overflow-x: scroll;
-    -webkit-flex-direction: column;
-  }
-
-  #posts .view {
-    width: 100px; height: 200px;
-    display: block;
-  }
-
-  #overflow{height:220px;overflow-x:scroll;overflow-y:hidden;}
-  #overflow .container{}
-  #overflow .container a {border:1px solid #CCC;float:left;width:100px;height:160px;float:left; margin-right: 10px}
 }
 
 @media print {

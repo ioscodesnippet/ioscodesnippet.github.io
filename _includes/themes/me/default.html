@@ -67,18 +67,6 @@
       });
 
 
-      $(document).ready(function () {
-          $(function(){
-          var width = 0;
-          $('#overflow .container p').each(function() {
-              width += $(this).outerWidth( true );
-          });
-          $('#overflow .container').css('width', width + "px");
-          });
-      });
-
-
-
     </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -128,11 +116,6 @@
       .pagination li {
         display:inline-block;
         background:none;
-      }
-      
-      #posts {
-        overflow: scroll;
-        height: 480px;
       }
 
     </style>
