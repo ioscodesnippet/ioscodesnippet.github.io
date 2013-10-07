@@ -137,7 +137,7 @@
 
         {{ content }}
 
-        {% if page.smart_layer != false %}
+        {% if site.addthis != false and page.smart_layer != false %}
         <!-- AddThis Smart Layers BEGIN -->
         <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f2e0cf454580a2c"></script>
@@ -158,7 +158,7 @@
         <!-- AddThis Smart Layers END -->
         {% endif %}
 
-        {% if page.sharing != false %}
+        {% if site.addthis != false and page.sharing != false %}
         <!-- AddThis Button BEGIN -->
         <p>If you think this is useful, share this article with your friends :)</p>
 
