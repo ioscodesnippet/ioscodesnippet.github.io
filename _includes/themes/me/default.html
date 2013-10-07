@@ -47,24 +47,28 @@
       
 
       var scroll2 = function() {
-        var parentDiv = $("#posts");
+        var parentDiv = $("#overflow");
         var innerListItem = $("#active");
 
-        // Scroll to the top
-//        parentDiv.scrollTop = parentDiv.scrollTop + innerListItem.position().top;
-
         // Scroll to the center
-        // parentDiv[0].scrollTop = parentDiv[0].scrollTop + innerListItem.position().top - parentDiv.height()/2 + innerListItem.height()/2;
         parentDiv.scrollTop(parentDiv.scrollTop() +
                             (innerListItem.position().top -
                              parentDiv.position().top) -
                              (parentDiv.height()/2) +
                              (innerListItem.height()/2) )
+
+        parentDiv.scrollLeft(parentDiv.scrollLeft() +
+                            (innerListItem.position().left -
+                             parentDiv.position().left) -
+                             (parentDiv.width()/2) +
+                             (innerListItem.width()/2) )
       };
 
-      $("#posts").ready(function() {
+      $("#overflow").ready(function() {
         scroll2();
       });
+
+
     </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -115,84 +119,12 @@
         display:inline-block;
         background:none;
       }
-      
-      #posts {
-        overflow: scroll;
-      }
+
     </style>
 
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <a href="/"><h1>ioscodesnippet.com</h1></a>
-
-        <div id="posts">
-        {% for post in site.posts %}
-          {% if page.title == post.title %}
-            {% capture class %}view active{% endcapture %}
-            {% capture id %}id="active"{% endcapture %}
-          {% else %}
-            {% capture class %}view{% endcapture %}
-            {% capture id %}{% endcapture %}
-          {% endif %}
-          {% if post.publish != false %}
-          <p class="{{ class }}" {{ id }}><a href="{{ post.url }}">{{ post.name }}<small>{{ post.title }}</small></a></p>
-          {% endif %}
-        {% endfor %}
-        </div>
-
-        {% comment %}
-        <div id="post-pagination" class="pagination">
-          {% if paginator.previous_page %}
-            <span class="previous">
-              {% if paginator.previous_page == 1 %}
-                <a href="/">Prev</a>
-              {% else %}
-                <a href="{{ paginator.previous_page_path }}">Prev</a>
-              {% endif %}
-            </span>
-          {% else %}
-            <span class="previous disabled">Prev</span>
-          {% endif %}
-
-          <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-
-          {% comment %}
-          <ul class="pages">
-            <li class="page">
-              {% if paginator.page == 1 %}
-                <span class="current-page">1</span>
-              {% else %}
-                <a href="/">1</a>
-              {% endif %}
-            </li>
-
-            {% for count in (2..paginator.total_pages) %}
-              <li class="page">
-                {% if count == paginator.page %}
-                  <span class="current-page">{{ count }}</span>
-                {% else %}
-                  <a href="/page{{ count }}">{{ count }}</a>
-                {% endif %}
-              </li>
-            {% endfor %}
-          </ul>
-          {% endcomment %}
-
-          {% if paginator.next_page %}
-            <span class="next">
-              <a href="{{ paginator.next_page_path }}">Next</a>
-            </span>
-          {% else %}
-            <span class="next disabled">
-              Next
-            </span>
-          {% endif %}
-
-        </div>
-        {% endcomment %}
-      </header>
       <section>
         {{ content }}
 
@@ -260,6 +192,77 @@
         {% include JB/comments %}
     
       </section>
+      <header>
+        <a href="/"><h1>ioscodesnippet.com</h1></a>
+
+        <div id="overflow">
+        <div class="container">
+        {% for post in site.posts %}
+          {% if page.title == post.title %}
+            {% capture class %}view active{% endcapture %}
+            {% capture id %}id="active"{% endcapture %}
+          {% else %}
+            {% capture class %}view{% endcapture %}
+            {% capture id %}{% endcapture %}
+          {% endif %}
+          {% if post.publish != false %}
+          <p class="{{ class }}" {{ id }}><a href="{{ post.url }}">{{ post.name }}<small>{{ post.title }}</small></a></p>
+          {% endif %}
+        {% endfor %}
+        </div>
+        </div>
+
+        {% comment %}
+        <div id="post-pagination" class="pagination">
+          {% if paginator.previous_page %}
+            <span class="previous">
+              {% if paginator.previous_page == 1 %}
+                <a href="/">Prev</a>
+              {% else %}
+                <a href="{{ paginator.previous_page_path }}">Prev</a>
+              {% endif %}
+            </span>
+          {% else %}
+            <span class="previous disabled">Prev</span>
+          {% endif %}
+
+          <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+          {% comment %}
+          <ul class="pages">
+            <li class="page">
+              {% if paginator.page == 1 %}
+                <span class="current-page">1</span>
+              {% else %}
+                <a href="/">1</a>
+              {% endif %}
+            </li>
+
+            {% for count in (2..paginator.total_pages) %}
+              <li class="page">
+                {% if count == paginator.page %}
+                  <span class="current-page">{{ count }}</span>
+                {% else %}
+                  <a href="/page{{ count }}">{{ count }}</a>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+          {% endcomment %}
+
+          {% if paginator.next_page %}
+            <span class="next">
+              <a href="{{ paginator.next_page_path }}">Next</a>
+            </span>
+          {% else %}
+            <span class="next disabled">
+              Next
+            </span>
+          {% endif %}
+
+        </div>
+        {% endcomment %}
+      </header>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
