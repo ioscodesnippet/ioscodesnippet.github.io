@@ -13,3 +13,6 @@
 [submodule "_includes/submodules/NSObject-JTCancelableScheduledBlock"]
 	path = _includes/submodules/NSObject-JTCancelableScheduledBlock
 	url = https://gist.github.com/1571800.git
+[submodule "_includes/submodules/NSObject-JTNibLoader"]
+	path = _includes/submodules/NSObject-JTNibLoader
+	url = https://gist.github.com/1578429.git
