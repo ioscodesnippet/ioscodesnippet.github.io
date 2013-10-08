@@ -1,13 +1,24 @@
 --- 
 layout: default
 title: Rendering any UIViews into UIImage in one line
-name: UIView+JTViewToImage
+name: UIView-JTViewToImage
 author: 
+  name: Jamz Tang
+  email: jamz@jamztang.com
   github: jamztang
   twitter: jamztang
 comments: true
 share: true
-desccription: A snippet to take snapshots on any views into image
+description: A snippet to take snapshots on any views into image
+spec:
+  version: 0.0.1
+  name: UIView-JTViewToImage
+  homepage: https://gist.github.com/jamztang/1578446
+  download: https://gist.github.com/jamztang/1578446/download
+  license: 
+    type: MIT
+  source:
+    git: git://gist.github.com/1578446.git
 tags: 
 - render
 - capture
@@ -36,8 +47,18 @@ UIImage *viewSnapshot = [myView toImage];
 Add this UIView+JTViewToImage category to your project, and you'll also needed
 to link &lt;QuartzCore/QuartzCore.h&gt; framework too.
 
-{% gist 1578446 UIView%2BJTViewToImage.h %}
-{% gist 1578446 UIView%2BJTViewToImage.m %}
+```objective-c
+{% include submodules/UIView-JTViewToImage/UIView-JTViewToImage.h %}
+```
+
+```objective-c
+{% include submodules/UIView-JTViewToImage/UIView-JTViewToImage.m %}
+```
+
+{% comment %}
+{% gist 1578446 UIView-JTViewToImage.h %}
+{% gist 1578446 UIView-JTViewToImage.m %}
+{% endcomment %}
 
 In advance, if you want to make sure you've the exact size of the static image
 output, try this line instead.

@@ -139,6 +139,11 @@
         <h1>{{ page.title }}</h1>
         {% endif %}
         {{ content }}
+      
+        {% if page.spec %}
+        {% capture spec %}{% include spec.md %}{% endcapture %}
+        {{ spec | markdownify }}
+        {% endif %}
 
         {% if site.addthis != false and page.smart_layer != false %}
         <!-- AddThis Smart Layers BEGIN -->
