@@ -10,7 +10,7 @@ follow :
   tumblr : ioscodesnippet
   rss : "http://ioscodesnippet.tumblr.com/rss"
 
-paginate: 10
+# paginate: 10
 
 markdown: redcarpet
 permalink: pretty
@@ -22,6 +22,8 @@ author :
   github : jamztang
   twitter : jamztang
   facebookid: jamztang
+
+addthis: true
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
