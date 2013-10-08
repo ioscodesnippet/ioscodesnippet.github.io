@@ -1,3 +1,12 @@
 [submodule "_includes/submodules/UIView-JTViewToImage"]
 	path = _includes/submodules/UIView-JTViewToImage
 	url = https://gist.github.com/1578446.git
+[submodule "_includes/submodules/UINibDecoderProxy"]
+	path = _includes/submodules/UINibDecoderProxy
+	url = https://gist.github.com/4466616.git
+[submodule "_includes/submodules/UIImage-JTColor"]
+	path = _includes/submodules/UIImage-JTColor
+	url = https://gist.github.com/1571875.git
+[submodule "_includes/submodules/JTDropShadowFixNavigationViewController"]
+	path = _includes/submodules/JTDropShadowFixNavigationViewController
+	url = https://gist.github.com/6591926.git

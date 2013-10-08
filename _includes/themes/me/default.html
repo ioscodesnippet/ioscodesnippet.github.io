@@ -28,10 +28,16 @@
     <meta property="fb:app_id" content="{{ site.JB.sharing.facebook.appid }}"/>
     <meta property="fb:admins" content="{{ site.author.facebookid }}"/>
 
+    {% if page.author %}
+      {% assign author = page.author %}
+    {% else %}
+      {% assign author = site.author %}
+    {% endif %}
+
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="{{ site.twitter }}">
     <meta name="twitter:title" content="{{ title }}">
-    <meta name="twitter:creator" content="{{ page.author.twitter }}">
+    <meta name="twitter:creator" content="{{ author.twitter }}">
     <meta name="twitter:image:src" content="{{ logo }}">
     <meta name="twitter:domain" content="{{ site.domain }}">
 
@@ -130,7 +136,7 @@
       </div>
       {% if page.date %}
       <div id="info">
-        <p>Created by Jamz Tang at {{ page.date | date: "%-d %B %Y" }}</p>
+        <p>Created by {{ author.name }} at {{ page.date | date: "%-d %B %Y" }}</p>
       </div>
       {% endif %}
       <section>

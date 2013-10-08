@@ -2,11 +2,17 @@
 layout: default
 title: Observes what's encoded in an NSCoder object
 name: UINibDecoderProxy
-author: 
-  github: jamztang
-  twitter: jamztang
 comments: true
 description: Sometimes you're wondering what are stored in an NSCoder instance? Here's a little utility exactly for this purpose, I called it `UINibDecoderProxy`.
+spec:
+  version: 0.0.1
+  name: UINibDecoderProxy
+  homepage: https://gist.github.com/jamztang/4466616
+  download: https://gist.github.com/jamztang/4466616/download
+  license:
+    type: MIT
+  source:
+    git: git://gist.github.com/4466616.git
 tags:
 - NSCoder
 - get all keys
@@ -32,7 +38,7 @@ Here's a little utility exactly for this purpose, I called it `UINibDecoderProxy
 Now go to `UINibDecoderProxy.m` and set a break point at `-[UINibDecoderProxy forwardInvocation:]` and log the necessary information for you. Notice at the inline comment below:
 
 ```objective-c
-{% include Pods/UINibDecoderProxy/UINibDecoderProxy.m %}
+{% include submodules/UINibDecoderProxy/UINibDecoderProxy.m %}
 ```
 
 Hopefully not too tricky.

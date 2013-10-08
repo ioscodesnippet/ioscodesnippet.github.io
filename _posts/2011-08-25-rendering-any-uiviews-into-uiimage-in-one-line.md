@@ -2,11 +2,6 @@
 layout: default
 title: Rendering any UIViews into UIImage in one line
 name: UIView-JTViewToImage
-author: 
-  name: Jamz Tang
-  email: jamz@jamztang.com
-  github: jamztang
-  twitter: jamztang
 comments: true
 share: true
 description: A snippet to take snapshots on any views into image
@@ -15,7 +10,7 @@ spec:
   name: UIView-JTViewToImage
   homepage: https://gist.github.com/jamztang/1578446
   download: https://gist.github.com/jamztang/1578446/download
-  license: 
+  license:
     type: MIT
   source:
     git: git://gist.github.com/1578446.git
