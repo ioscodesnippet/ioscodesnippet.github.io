@@ -10,3 +10,6 @@
 [submodule "_includes/submodules/JTDropShadowFixNavigationViewController"]
 	path = _includes/submodules/JTDropShadowFixNavigationViewController
 	url = https://gist.github.com/6591926.git
+[submodule "_includes/submodules/NSObject-JTCancelableScheduledBlock"]
+	path = _includes/submodules/NSObject-JTCancelableScheduledBlock
+	url = https://gist.github.com/1571800.git
