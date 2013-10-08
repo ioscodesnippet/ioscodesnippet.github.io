@@ -198,6 +198,7 @@ footer {
   border-bottom: 1px dotted lightgray;
   padding-top: 20px;
   padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
 }
 
 #logo a {
