@@ -19,22 +19,23 @@ tags:
 - about
 ---
 
-# About
+ioscodesnippet.com is founded by [Jamz Tang]. He started iOS development since 2009.
+He noticed there's a lot simple tasks that required too much boilerplate code for 
+developers to write manually. Three years ago he decided to host a blog to collect
+these snippets and reusable components hopefully that would also help others 
+out there. However with a full-time job with him, he was lacking deserved commitment 
+to this blog.
 
-ioscodesnippet.com is founded by [Jamz Tang]. During his 3+ years iOS
-experience he noticed there is just too much boilerplate code developers
-have to write. Since early 2012 he decided to host a blog to collect
-snippets and reusable components to hopefully also help others out
-there, but he's lacking commitment to this blog due to his full-time
-job.
+Something has changed after Sept 2013. He quitted his job and become a 
+freelancer. With a bit more free time with him, he decided it's time to 
+look back into revamping this site. The old blog has no easy way to let 
+visitors to download and use the snippets, by integrating the CocoaPods, it 
+could probably make using these snippets much easier.
 
-2013 Sept is a big month for him. He decided to quit his job and become
-a freelancer. He think its time to look back into revamping this site,
-removing obsolete code and integrate Cocoapods to make using the
-snippets much easier.
+> Two heads are better than one.
 
-"Maybe someone would also like to contribute?", Tang thought. If you think
-you like this idea, please [get in touch] with him :)
+If you think you like this idea and also like to contribute, please 
+[get in touch] with him :)
 
 <small>This site is hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
 
