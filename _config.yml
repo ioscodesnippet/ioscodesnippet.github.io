@@ -23,7 +23,7 @@ author :
   twitter : jamztang
   facebookid: jamztang
 
-addthis: true
+addthis: false
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
