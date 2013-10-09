@@ -19,3 +19,6 @@
 [submodule "_includes/submodules/JTKeyValueObserver"]
 	path = _includes/submodules/JTKeyValueObserver
 	url = git://gist.github.com/6009092.git
+[submodule "_includes/submodules/JTTargetActionBlock"]
+	path = _includes/submodules/JTTargetActionBlock
+	url = git://gist.github.com/2205564.git
