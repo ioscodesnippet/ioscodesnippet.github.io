@@ -1,22 +1,30 @@
 ---
 layout: post
+name: JTStringAddition
 title: NSStringf. Simpler printf styled +[NSString stringWithFormat:]
+spec:
+  homepage: https://gist.github.com/jamztang/1578509
+  download: https://gist.github.com/jamztang/1578509/download
+  source:
+    git: git://gist.github.com/1578509.git
 tags:
-- ioscodesnippet
 - NSString
 - printf
 - NSLog
 - iOS
-- tutorial
-- cocoa
-- objective-c
 ---
+
 If you thinks that +[NSString stringWithFormat:] is simply annoying.
 
 If you missed the C style string formatter like printf() or NSLog().
 
+```objective-c
 [NSString stringWithFormat:@”Why should I type this long?”];
+```
 
+Consider following helper:
+
+```objective-c
 //
 //  JTStringAddition.h
 //
@@ -25,8 +33,9 @@ If you missed the C style string formatter like printf() or NSLog().
 //
 
 NSString *NSStringf(NSString *format, ...);
+```
 
-
+```objective-c
 //
 //  JTStringAddition.m
 //
@@ -45,7 +54,7 @@ NSString *NSStringf(NSString *format, ...) {
 
     return [str autorelease];
 }
-
-
+```
 
 NSStringf(@”It’s just so much easier. %@”, @”Really.”);
+
