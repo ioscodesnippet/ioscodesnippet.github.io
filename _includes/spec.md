@@ -6,7 +6,7 @@ Using CocoaPods:
 {% endif %}
 
 Clone this repository:  
-`git clone {{ page.spec.source.git }}`
+`git clone {{ page.spec.source.git }} {{ page.name }}`
 
 [Download] | [More...]
 
