@@ -1,8 +1,9 @@
 ----
 ### Installation
-
+{% if page.spec.name %}
 Using CocoaPods:  
-`pod '{{ page.spec.name }}', '~> {{ page.spec.version }}'`
+`pod '{{ page.spec.name }}'{% if page.spec.version %}, '~> {{ page.spec.version }}'{% endif %}`
+{% endif %}
 
 Clone this repository:  
 `git clone {{ page.spec.source.git }}`
