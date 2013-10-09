@@ -65,7 +65,7 @@ UINavigationController *navController = [[JTDropShadowFixNavigationViewControlle
   
 Or if you use storyboard, simply change the subclass of your UINavigationController to JTDropShadowFixNavigationViewController.
 
-![](https://gist.github.com/jamztang/6591926/raw/0437477ed7efd34a81bcc66a47de30c95071d7cb/modify-class.png)
+![](/images/2013-09-17-custom-shadow-image-on-navigation-bar-ios6-fix/modify-class.png)
 
 > In fact there's an even simpler method you'll notice in the snippet.
 
