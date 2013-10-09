@@ -16,3 +16,6 @@
 [submodule "_includes/submodules/NSObject-JTNibLoader"]
 	path = _includes/submodules/NSObject-JTNibLoader
 	url = git://gist.github.com/1578429.git
+[submodule "_includes/submodules/JTKeyValueObserver"]
+	path = _includes/submodules/JTKeyValueObserver
+	url = git://gist.github.com/6009092.git
