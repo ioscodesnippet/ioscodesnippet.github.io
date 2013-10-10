@@ -126,6 +126,13 @@
         background:none;
       }
 
+      .cocoapods-logo {
+        background-repeat: no-repeat;
+        background-size: 1em 1em;
+        width: 1em;
+        height: 1em;
+      }
+
     </style>
 
   </head>
@@ -231,7 +238,7 @@
             {% capture id %}{% endcapture %}
           {% endif %}
           {% if post.publish != false %}
-          <p class="{{ class }}" {{ id }}><a href="{{ post.url }}">{{ post.name }}<small>{{ post.title }}</small></a></p>
+          {% capture cocoapods %}{% if post.spec.name %}<img src='/images/cocoapods.png' class='cocoapods-logo' />{% endif %}{% endcapture %} <p class="{{ class }}" {{ id }}><a href="{{ post.url }}">{{ post.name }}<small>{{ cocoapods }} {{ post.title }}</small></a></p>
           {% endif %}
         {% endfor %}
         </div>
