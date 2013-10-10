@@ -3,6 +3,7 @@ layout: default
 title: Welcome
 comments: false
 description: "Self contained inspiring little pieces on iOS development. Now available on ioscodesnippet Cocoapods repo."
+image: cover.jpg
 follow: true
 sharing: false
 type: website

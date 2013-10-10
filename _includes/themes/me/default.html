@@ -18,7 +18,12 @@
     {% endif %}
 
     {% capture title %}{{ page.title }} | {{ site.name }}{% endcapture %}
+    {% if page.image %}
+    {% capture logo %}{{ site.url }}/images/{{ page.image }}{% endcapture %}
+    {% else %}
     {% capture logo %}{{ site.url }}/images/logo.png{% endcapture %}
+    {% endif %}
+
 
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:site_name" content="{{ site.name }}" />
