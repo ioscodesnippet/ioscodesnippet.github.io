@@ -23,5 +23,5 @@ with the direct download link.
 
 > ![](/images/usage.png)
 
-Enjoy the code :)
+Start browsing around and enjoy the code :)
 

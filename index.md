@@ -18,7 +18,7 @@ tags:
 - resource
 ---
 
-`ioscodesnippet.com` is a collection of self contained inspiring little pieces on iOS development. The code snippets here can be installed easily through our public [ioscodesnippet / Spec][1] CocoaPods custom repo.
+`ioscodesnippet.com` is a collection of self contained inspiring little pieces on iOS development. Most code snippets here can be installed easily through our public [ioscodesnippet / Spec][1] CocoaPods custom repo.
 
 Easy installation with CocoaPods
 ---

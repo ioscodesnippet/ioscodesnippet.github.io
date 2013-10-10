@@ -1,7 +1,7 @@
 ----
 ### Installation
 {% if page.spec.name %}
-Using CocoaPods:  
+Using CocoaPods: [[?]]  
 `pod '{{ page.spec.name }}'{% if page.spec.version %}, '~> {{ page.spec.version }}'{% endif %}`
 {% endif %}
 
@@ -23,4 +23,4 @@ Repository:
 
 [Download]: {{ page.spec.download }}
 [More...]: {{ page.spec.homepage }} 
-
+[?]: /
