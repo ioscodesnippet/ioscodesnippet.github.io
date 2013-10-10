@@ -26,7 +26,7 @@ tags:
 - clipsToBounds
 ---
 
-This is an update to the [Adding Drop Shadow on UINavigationBar](http://ioscodesnippet.com/post/10437516225/adding-drop-shadow-on-uinavigationbar) which was written prior to iOS 6.0
+This is an update to the [Adding Drop Shadow on UINavigationBar](/post/10437516225/adding-drop-shadow-on-uinavigationbar) which was written prior to iOS 6.0
 
 Since iOS 6.0 Apple introduced the `-[UINavigationBar shadowImage]` property. We should probably leverage that, which are also UIAppearance selectors.
 
