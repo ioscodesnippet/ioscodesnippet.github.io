@@ -23,7 +23,7 @@ author :
   twitter : jamztang
   facebookid: jamztang
 
-addthis: false
+addthis: true
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -76,7 +76,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
+    provider : false
     disqus :
       short_name : ioscodesnippet
     livefyre :
