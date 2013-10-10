@@ -39,12 +39,21 @@
       {% assign author = site.author %}
     {% endif %}
 
+    {% if page.image == "cover.jpg" %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{{ site.follow.twitter }}">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:creator" content="{{ author.twitter }}">
+    <meta name="twitter:image:src" content="{{ logo }}">
+    <meta name="twitter:domain" content="{{ site.domain }}">
+    {% else %}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="{{ site.follow.twitter }}">
     <meta name="twitter:title" content="{{ title }}">
     <meta name="twitter:creator" content="{{ author.twitter }}">
     <meta name="twitter:image:src" content="{{ logo }}">
     <meta name="twitter:domain" content="{{ site.domain }}">
+    {% endif %}
 
     <title>{{ title }}</title>
 

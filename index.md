@@ -19,9 +19,17 @@ tags:
 - resource
 ---
 
+![](/images/cover.jpg)
+
 `ioscodesnippet.com` is a collection of self contained inspiring little pieces on iOS development. Most code snippets here can be installed easily through our public [ioscodesnippet / Spec][1] CocoaPods custom repo.
 
-Easy installation with CocoaPods
+There's something new here:
+
+- New CocoaPods integration
+- Quick Installation section
+- Responsive design
+
+Start using CocoaPods
 ---
 
 To configure the ioscodesnippet custom repo, run this once.
