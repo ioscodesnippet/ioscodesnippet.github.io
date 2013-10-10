@@ -1,7 +1,7 @@
 name: "ioscodesnippet.com"
 title: "ioscodesnippet.com"
 
-url: "http://beta.ioscodesnippet.com"
+url: "http://ioscodesnippet.com"
 domain: "ioscodesnippet.com"
 
 follow :
@@ -97,7 +97,7 @@ JB :
     provider : google 
     google : 
         tracking_id : 'UA-28026242-3'
-        domain_name : "beta.ioscodesnippet.com"
+        domain_name : "ioscodesnippet.com"
     getclicky :
       site_id : 
     mixpanel :
