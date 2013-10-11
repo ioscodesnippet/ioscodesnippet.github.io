@@ -22,3 +22,6 @@
 [submodule "_includes/submodules/JTTargetActionBlock"]
 	path = _includes/submodules/JTTargetActionBlock
 	url = git://gist.github.com/2205564.git
+[submodule "_includes/submodules/MethodSwizzle"]
+	path = _includes/submodules/MethodSwizzle
+	url = git://gist.github.com/4970366.git

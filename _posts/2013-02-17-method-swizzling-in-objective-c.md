@@ -5,6 +5,8 @@ title: Method Swizzling in Objective-C
 comments: true
 share: true
 spec:
+  name: MethodSwizzle
+  version: 0.0.1
   homepage: https://gist.github.com/jamztang/4970366
   download: https://gist.github.com/jamztang/4970366/download
   source:
@@ -24,7 +26,13 @@ Despite it's flaws, this little technique can be so powerful and let you reveal 
 
 So here's the base snippet:
 
-<script src="https://gist.github.com/4970366.js" type="text/javascript"> </script>
+```objective-c
+{% include submodules/MethodSwizzle/MethodSwizzle.h %}
+```
+
+```objective-c
+{% include submodules/MethodSwizzle/MethodSwizzle.m %}
+```
 
 Example usage:
 
