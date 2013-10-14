@@ -1,19 +1,20 @@
 --- 
 layout: default
-title: Rendering any UIViews into UIImage in one line
+title: Rendering any UIViews into UIImage in one line (updated with iOS 7 support)
 name: UIView-JTViewToImage
 comments: true
 share: true
-description: A snippet to take snapshots on any views into image
+description: Rendering any UIViews into UIImage in one line (updated with iOS 7 support)
+updated: 2013-10-14
 spec:
-  version: 0.0.1
+  version: 0.1
   name: UIView-JTViewToImage
-  homepage: https://gist.github.com/jamztang/1578446
-  download: https://gist.github.com/jamztang/1578446/download
+  homepage: https://github.com/ioscodesnippet/UIView-JTViewToImage
+  download: https://github.com/ioscodesnippet/UIView-JTViewToImage/archive/master.zip
   license:
     type: MIT
   source:
-    git: git://gist.github.com/1578446.git
+    git: https://github.com/ioscodesnippet/UIView-JTViewToImage.git
 tags: 
 - render
 - capture
@@ -43,11 +44,11 @@ Add this UIView+JTViewToImage category to your project, and you'll also needed
 to link &lt;QuartzCore/QuartzCore.h&gt; framework too.
 
 ```objective-c
-{% include submodules/UIView-JTViewToImage/UIView-JTViewToImage.h %}
+{% include submodules/UIView-JTViewToImage/Classes/UIView-JTViewToImage.h %}
 ```
 
 ```objective-c
-{% include submodules/UIView-JTViewToImage/UIView-JTViewToImage.m %}
+{% include submodules/UIView-JTViewToImage/Classes/UIView-JTViewToImage.m %}
 ```
 
 {% comment %}
@@ -66,4 +67,8 @@ UIImage *viewSnapshot = [myView toImageWithScale:1];
   
 This will tell your app to ignore the screen scale and simply reference to the
 size of the view bounds.
+
+> Updated: 2013-10-14
+
+With iOS 7 faster API, the screen capturing method is about 1.8x faster on my iPhone 5. Actual time elasped was down from 0.09s to 0.05 seconds. Clone the repository to test it in action.
 

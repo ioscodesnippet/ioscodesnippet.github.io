@@ -1,6 +1,6 @@
 [submodule "_includes/submodules/UIView-JTViewToImage"]
 	path = _includes/submodules/UIView-JTViewToImage
-	url = git://gist.github.com/1578446.git
+	url = git://github.com/ioscodesnippet/UIView-JTViewToImage.git
 [submodule "_includes/submodules/UINibDecoderProxy"]
 	path = _includes/submodules/UINibDecoderProxy
 	url = git://gist.github.com/4466616.git
