@@ -1,7 +1,8 @@
 ---
 layout: post
 name: UIImage-JTImageCrop
-title: Creating an image of image in specific rect or by proportion
+title: Crop an image in specific rect
+alias: [/post/10001584770/creating-an-image-of-image-in-specific-rect-or-by/index.html, /post/10001584770/crop-an-image-in-specific-rect/index.html]
 comments: true
 share: true
 spec:
