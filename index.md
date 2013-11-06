@@ -21,7 +21,7 @@ tags:
 
 ![](/images/cover.jpg)
 
-`ioscodesnippet.com` is a collection of self contained inspiring little pieces on iOS development. Most code snippets here can be installed easily through our public [ioscodesnippet / Spec][1] CocoaPods custom repo.
+`ioscodesnippet.com` is a collection of self contained inspiring little pieces on iOS development. Most code snippets here can be installed easily through our public [ioscodesnippet / Spec][spec] CocoaPods custom repo.
 
 There's something new here:
 
@@ -55,5 +55,6 @@ You'll be instructed to open the project with `yourproject.xcworkspace`.
 
 [Learn more][Cocoapods], or you can browse our [original usage guide][1].
 
-[1]: usage
+[spec]:https://github.com/ioscodesnippet/Specs
+[1]: /usage
 [Cocoapods]:https://github.com/CocoaPods/CocoaPods
