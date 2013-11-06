@@ -1,0 +1,38 @@
+
+  <!-- required jquery 
+    <script src="/javascripts/jquery-1.10.2.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    function trackOutboundLink(link, category, action) { 
+      try { 
+      mixpanel.track(category + ": " + action);
+      _gaq.push(['_trackEvent', category , action]); 
+      } catch(err){}
+    }
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var localserver = window.location.hostname;
+
+      $("a").click(function(){
+        var originalURL = $(this).attr("href");
+        var name = $(this)[0].innerHTML;
+
+        var currentRelativePath = $(location).attr("href").replace('http://'+localserver,'');
+
+        var eventName = currentRelativePath + " '" + name + "'";
+        trackOutboundLink($(this), eventName, originalURL);
+        // alert(eventName + ": " + originalURL);
+      });
+
+      $("a").not("a[href^='/']").click(function(){
+        $(this).attr("target", "blank");
+      });
+
+    });
+
+  </script>
+
+
